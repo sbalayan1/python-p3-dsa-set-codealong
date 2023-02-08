@@ -7,7 +7,6 @@ class MySet:
     def __init__(self, values=[]):
         pass
         self.dictionary = {}
-        self.length = len(values)
         for value in values:
             if value not in self.dictionary:
                 self.dictionary[value] = 1
@@ -18,21 +17,23 @@ class MySet:
     def add(self, value):
         pass
         if not self.has(value): self.dictionary[value] = 1
+        return self
 
 
     #has
     def has(self, value):
         pass
-        return True if value in self.dictionary else False
+        return value in self.dictionary
 
 
     #delete
     def delete(self, value):
         pass
         if self.has(value): del self.dictionary[value]
+        return self
 
     #size
     def size(self):
         pass
-        return self.length
+        return len(self.dictionary)
 
