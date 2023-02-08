@@ -37,3 +37,12 @@ class MySet:
         pass
         return len(self.dictionary)
 
+    def clear(self):
+        self.dictionary = {}
+        return self
+
+    def __str__(self):
+        pass
+        values = ",".join([str(val) for val in self.dictionary.keys()])
+        return f"MySet: {{{values}}}"
+
